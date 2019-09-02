@@ -11,12 +11,18 @@ final class ModuleFactoryImp: ModuleFactoryList {
     // MARK: - LoaderModuleFactory
     
     func makeLoaderModule() -> LoadingViewInput & LoadingViewOutput {
-        return LoadingViewController.controllerFromStoryboard(.main)
+        return LoadingViewController.controllerFromStoryboard(.load)
     }
     
     // MARK: - AuthModuleFactory
     
     func makeAuthModule() -> AuthorizationViewInput & AuthorizationViewOutput {
         return AuthorizationViewController.controllerFromStoryboard(.auth)
+    }
+    
+    // MARK: - MainModuleFactory
+    
+    func makeMainModule() -> MainViewInput & MainViewOutput {
+        return MainViewController.controllerFromStoryboard(.main)
     }
 }

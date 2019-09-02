@@ -7,11 +7,11 @@
 //
 
 private enum LaunchInstructor {
-//    case main
+    case main
     case auth
     
     static func configure(isAuthorized: Bool = false ) -> LaunchInstructor {
-        if isAuthorized { return .auth }
+        if isAuthorized { return .main }
         return .auth
     }
 }
@@ -21,8 +21,10 @@ final class ApplicationCoordinator: BaseCoordinator {
     private let router: Router
     
     private var instructor: LaunchInstructor {
-        //        return LaunchInstructor.configure(isAuthorized: token != nil)
-        return LaunchInstructor.configure(isAuthorized: true)
+        if let isAuthorized = UserDefaults.standard.value(forKey: Constants.authorizedKey) as? Bool {
+            return LaunchInstructor.configure(isAuthorized: isAuthorized)
+        }
+        return LaunchInstructor.configure(isAuthorized: false)
     }
     
     init(router: Router, coordinatorFactory: CoordinatorFactory) {
@@ -47,7 +49,7 @@ final class ApplicationCoordinator: BaseCoordinator {
     private func runInstructor() {
         switch instructor {
         case .auth: runAuthFlow()
-//        case .main: runMainFlow()
+        case .main: runMainFlow()
         }
     }
     
@@ -61,13 +63,13 @@ final class ApplicationCoordinator: BaseCoordinator {
         coordinator.start()
     }
     
-//    private func runMainFlow() {
-//        let coordinator = coordinatorFactory.makeMainCoordinator(router: router)
-//        coordinator.finishFlow = { [weak self, weak coordinator] in
-//            self?.start()
-//            self?.removeDependency(coordinator)
-//        }
-//        addDependency(coordinator)
-//        coordinator.start()
-//    }
+    private func runMainFlow() {
+        let coordinator = coordinatorFactory.makeMainCoordinator(router: router)
+        coordinator.finishFlow = { [weak self, weak coordinator] in
+            self?.start()
+            self?.removeDependency(coordinator)
+        }
+        addDependency(coordinator)
+        coordinator.start()
+    }
 }

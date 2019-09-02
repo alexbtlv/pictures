@@ -24,9 +24,14 @@ final class AuthenticationCoordinator: BaseCoordinator {
         var view = factory.makeAuthModule()
         view.viewModel = AuthorizationViewModel()
         view.onSuccess = { [weak self] in
-            print("authorized")
-//            self?.finishFlow?()
+            self?.saveUser()
+            self?.finishFlow?()
         }
         router.setRootModule(view)
+    }
+    
+    private func saveUser() {
+        UserDefaults.standard.set(true, forKey: Constants.authorizedKey)
+        UserDefaults.standard.synchronize()
     }
 }

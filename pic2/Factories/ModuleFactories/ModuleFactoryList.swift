@@ -7,4 +7,5 @@
 //
 
 protocol ModuleFactoryList: LoaderModuleFactory,
-                            AuthModuleFactory {}
+                            AuthModuleFactory,
+                            MainModuleFactory {}

@@ -8,4 +8,7 @@
 
 enum Constants {
     static let maximumEmailLength: Int = 320
+    
+    // MARK: User Defaults keys
+    static let authorizedKey = "UserIsAuthorized"
 }

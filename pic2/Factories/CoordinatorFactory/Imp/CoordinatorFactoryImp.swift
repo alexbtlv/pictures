@@ -16,9 +16,9 @@ final class CoordinatorFactoryImp: CoordinatorFactory {
         return AuthenticationCoordinator(with: ModuleFactoryImp(), router: router)
     }
     
-//    func makeMainCoordinator(router: Router) -> Coordinatable {
-//        <#code#>
-//    }
+    func makeMainCoordinator(router: Router) -> Coordinatable {
+        return MainCoordinator(with: ModuleFactoryImp(), router: router)
+    }
     
     // MARK: - Private methods
     

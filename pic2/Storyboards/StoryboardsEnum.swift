@@ -9,4 +9,5 @@
 enum Storyboards: String {
     case main = "Main"
     case auth = "Auth"
+    case load = "Load"
 }

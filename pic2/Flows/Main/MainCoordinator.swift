@@ -6,4 +6,24 @@
 //  Copyright © 2019 Alexander Batalov. All rights reserved.
 //
 
-import Foundation
+final class MainCoordinator: BaseCoordinator {
+    
+    private let factory: MainModuleFactory
+    private let router: Router
+    
+    init(with factory: MainModuleFactory, router: Router) {
+        self.factory = factory
+        self.router = router
+    }
+    
+    override func start() {
+        showMainModule()
+    }
+    
+    private func showMainModule() {
+        var view = factory.makeMainModule()
+        view.viewModel = MainViewModel()
+        router.setRootModule(view)
+    }
+}
+
