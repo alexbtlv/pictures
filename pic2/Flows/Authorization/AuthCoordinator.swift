@@ -22,7 +22,11 @@ final class AuthenticationCoordinator: BaseCoordinator {
     
     private func runAuthModule() {
         var view = factory.makeAuthModule()
-        view.viewModel = AuthorizatioViewModel()
+        view.viewModel = AuthorizationViewModel()
+        view.onSuccess = { [weak self] in
+            print("authorized")
+//            self?.finishFlow?()
+        }
         router.setRootModule(view)
     }
 }

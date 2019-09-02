@@ -10,16 +10,66 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Authorizatio View Controller-->
+        <!--Authorization View Controller-->
         <scene sceneID="A0f-eO-jOx">
             <objects>
-                <viewController storyboardIdentifier="AuthorizatioViewController" id="6no-yx-xyY" customClass="AuthorizatioViewController" customModule="pic2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthorizationViewController" id="6no-yx-xyY" customClass="AuthorizationViewController" customModule="pic2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2ef-sd-fQ2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="THl-cA-wDB" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="30" y="84" width="354" height="39"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KVt-VF-R4o" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="30" y="153" width="354" height="39"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7J-I8-A2x">
+                                <rect key="frame" x="30" y="222" width="354" height="50"/>
+                                <color key="backgroundColor" red="0.0039215686269999999" green="0.59607843140000005" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="59r-Y1-0qh"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2e-1a-uHx">
+                                <rect key="frame" x="30" y="302" width="354" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f2e-1a-uHx" firstAttribute="leading" secondItem="c4E-9V-c67" secondAttribute="leading" constant="30" id="FW7-vY-Thu"/>
+                            <constraint firstItem="c4E-9V-c67" firstAttribute="trailing" secondItem="KVt-VF-R4o" secondAttribute="trailing" constant="30" id="IFL-rP-6Rv"/>
+                            <constraint firstItem="KVt-VF-R4o" firstAttribute="leading" secondItem="c4E-9V-c67" secondAttribute="leading" constant="30" id="JJA-QJ-c0j"/>
+                            <constraint firstItem="THl-cA-wDB" firstAttribute="top" secondItem="c4E-9V-c67" secondAttribute="top" constant="40" id="KHb-Xr-Iz3"/>
+                            <constraint firstItem="f2e-1a-uHx" firstAttribute="top" secondItem="E7J-I8-A2x" secondAttribute="bottom" constant="30" id="MaX-3K-cRF"/>
+                            <constraint firstItem="KVt-VF-R4o" firstAttribute="top" secondItem="THl-cA-wDB" secondAttribute="bottom" constant="30" id="W6s-pf-2eq"/>
+                            <constraint firstItem="c4E-9V-c67" firstAttribute="trailing" secondItem="THl-cA-wDB" secondAttribute="trailing" constant="30" id="abH-6u-f60"/>
+                            <constraint firstItem="E7J-I8-A2x" firstAttribute="leading" secondItem="c4E-9V-c67" secondAttribute="leading" constant="30" id="gHp-Lx-yOz"/>
+                            <constraint firstItem="THl-cA-wDB" firstAttribute="leading" secondItem="c4E-9V-c67" secondAttribute="leading" constant="30" id="gM2-j3-Ud9"/>
+                            <constraint firstItem="c4E-9V-c67" firstAttribute="trailing" secondItem="f2e-1a-uHx" secondAttribute="trailing" constant="30" id="oYa-g3-s8r"/>
+                            <constraint firstItem="E7J-I8-A2x" firstAttribute="top" secondItem="KVt-VF-R4o" secondAttribute="bottom" constant="30" id="pdp-cu-Cct"/>
+                            <constraint firstItem="c4E-9V-c67" firstAttribute="trailing" secondItem="E7J-I8-A2x" secondAttribute="trailing" constant="30" id="vPJ-Do-cDE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="c4E-9V-c67"/>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="E7J-I8-A2x" id="eCx-1P-VT6"/>
+                        <outlet property="emailTextField" destination="THl-cA-wDB" id="Vtm-b4-PEo"/>
+                        <outlet property="infoLabel" destination="f2e-1a-uHx" id="sIm-Dr-PWi"/>
+                        <outlet property="passwordTextField" destination="KVt-VF-R4o" id="HZJ-D1-V4z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TvG-sp-0Vj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

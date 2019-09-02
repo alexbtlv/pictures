@@ -8,8 +8,8 @@ target 'pic2' do
   
   # Autocomplete & Code Style
   pod 'R.swift', '~> 5.0.3'
-  pod 'SwiftLint'
-  
+#  pod 'SwiftLint'
+
   # Reactive
   pod 'RxSwift'
   pod 'RxCocoa',    '~> 4.0'

@@ -7,6 +7,6 @@
 //
 
 protocol AuthModuleFactory {
-    func makeAuthModule() -> AuthorizatioViewInput & AuthorizatioViewOutput
+    func makeAuthModule() -> AuthorizationViewInput & AuthorizationViewOutput
 }
 

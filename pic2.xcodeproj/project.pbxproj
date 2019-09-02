@@ -42,11 +42,14 @@
 		85683437231D69C600D18337 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683436231D69C600D18337 /* AuthCoordinator.swift */; };
 		85683439231D69D900D18337 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683438231D69D900D18337 /* MainCoordinator.swift */; };
 		8568343B231D6B2300D18337 /* AuthModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568343A231D6B2300D18337 /* AuthModuleFactory.swift */; };
-		8568343E231D6BD900D18337 /* AuthorizatioViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568343D231D6BD900D18337 /* AuthorizatioViewOutput.swift */; };
-		85683441231D6C3700D18337 /* AuthorizatioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683440231D6C3700D18337 /* AuthorizatioViewModel.swift */; };
-		85683443231D6C5300D18337 /* AuthorizatioViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683442231D6C5300D18337 /* AuthorizatioViewInput.swift */; };
-		85683445231D6C7E00D18337 /* AuthorizatioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683444231D6C7E00D18337 /* AuthorizatioViewController.swift */; };
+		8568343E231D6BD900D18337 /* AuthorizationViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568343D231D6BD900D18337 /* AuthorizationViewOutput.swift */; };
+		85683441231D6C3700D18337 /* AuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683440231D6C3700D18337 /* AuthorizationViewModel.swift */; };
+		85683443231D6C5300D18337 /* AuthorizationViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683442231D6C5300D18337 /* AuthorizationViewInput.swift */; };
+		85683445231D6C7E00D18337 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683444231D6C7E00D18337 /* AuthorizationViewController.swift */; };
 		85683447231D6E9B00D18337 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85683446231D6E9B00D18337 /* Auth.storyboard */; };
+		85683449231D728F00D18337 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683448231D728F00D18337 /* StringExtensions.swift */; };
+		8568344B231D72D300D18337 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568344A231D72D300D18337 /* Constants.swift */; };
+		8568344E231D789D00D18337 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568344D231D789C00D18337 /* R.generated.swift */; };
 		C9666CC78F9E790CC9524A4A /* Pods_pic2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE7D85D6C35EAB245399CA2 /* Pods_pic2.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,11 +94,14 @@
 		85683436231D69C600D18337 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		85683438231D69D900D18337 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		8568343A231D6B2300D18337 /* AuthModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModuleFactory.swift; sourceTree = "<group>"; };
-		8568343D231D6BD900D18337 /* AuthorizatioViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizatioViewOutput.swift; sourceTree = "<group>"; };
-		85683440231D6C3700D18337 /* AuthorizatioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizatioViewModel.swift; sourceTree = "<group>"; };
-		85683442231D6C5300D18337 /* AuthorizatioViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizatioViewInput.swift; sourceTree = "<group>"; };
-		85683444231D6C7E00D18337 /* AuthorizatioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizatioViewController.swift; sourceTree = "<group>"; };
+		8568343D231D6BD900D18337 /* AuthorizationViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewOutput.swift; sourceTree = "<group>"; };
+		85683440231D6C3700D18337 /* AuthorizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewModel.swift; sourceTree = "<group>"; };
+		85683442231D6C5300D18337 /* AuthorizationViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewInput.swift; sourceTree = "<group>"; };
+		85683444231D6C7E00D18337 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		85683446231D6E9B00D18337 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		85683448231D728F00D18337 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		8568344A231D72D300D18337 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8568344D231D789C00D18337 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		BB859FC06BEE7D9AD8260D58 /* Pods-pic2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pic2.release.xcconfig"; path = "Target Support Files/Pods-pic2/Pods-pic2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				856833C0231C231E00D18337 /* ClosureTypealiases.swift */,
+				8568344A231D72D300D18337 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -196,6 +203,7 @@
 		856833C9231C235700D18337 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8568344D231D789C00D18337 /* R.generated.swift */,
 				856833AC231C22DB00D18337 /* Assets.xcassets */,
 				856833CA231C361800D18337 /* pic2-Bridging-Header.h */,
 				856833AE231C22DB00D18337 /* LaunchScreen.storyboard */,
@@ -246,6 +254,7 @@
 				85683406231D55C700D18337 /* UIViewController */,
 				8568341E231D5A8B00D18337 /* NSObjectExtensions.swift */,
 				85683430231D644000D18337 /* UIApplicationExtensions.swift */,
+				85683448231D728F00D18337 /* StringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -363,9 +372,9 @@
 			isa = PBXGroup;
 			children = (
 				8568343F231D6C2800D18337 /* ViewModel */,
-				8568343D231D6BD900D18337 /* AuthorizatioViewOutput.swift */,
-				85683442231D6C5300D18337 /* AuthorizatioViewInput.swift */,
-				85683444231D6C7E00D18337 /* AuthorizatioViewController.swift */,
+				8568343D231D6BD900D18337 /* AuthorizationViewOutput.swift */,
+				85683442231D6C5300D18337 /* AuthorizationViewInput.swift */,
+				85683444231D6C7E00D18337 /* AuthorizationViewController.swift */,
 			);
 			path = AuthorizationModule;
 			sourceTree = "<group>";
@@ -373,7 +382,7 @@
 		8568343F231D6C2800D18337 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				85683440231D6C3700D18337 /* AuthorizatioViewModel.swift */,
+				85683440231D6C3700D18337 /* AuthorizationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -395,6 +404,7 @@
 			buildConfigurationList = 856833B4231C22DB00D18337 /* Build configuration list for PBXNativeTarget "pic2" */;
 			buildPhases = (
 				1E92C8E9125C6CB8E9CB1E84 /* [CP] Check Pods Manifest.lock */,
+				8568344C231D771000D18337 /* ShellScript */,
 				8568339E231C22DB00D18337 /* Sources */,
 				8568339F231C22DB00D18337 /* Frameworks */,
 				856833A0231C22DB00D18337 /* Resources */,
@@ -498,6 +508,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pic2/Pods-pic2-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8568344C231D771000D18337 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -511,12 +540,13 @@
 				85683424231D5B6600D18337 /* StoryboardsEnum.swift in Sources */,
 				8568340C231D572D00D18337 /* LoaderModuleFactory.swift in Sources */,
 				85683417231D583B00D18337 /* BaseView.swift in Sources */,
-				8568343E231D6BD900D18337 /* AuthorizatioViewOutput.swift in Sources */,
+				8568343E231D6BD900D18337 /* AuthorizationViewOutput.swift in Sources */,
 				85683411231D57AD00D18337 /* LoadingViewModel.swift in Sources */,
 				8568341D231D5A2900D18337 /* BaseViewController.swift in Sources */,
 				8568342A231D602A00D18337 /* APIProvider.swift in Sources */,
-				85683441231D6C3700D18337 /* AuthorizatioViewModel.swift in Sources */,
+				85683441231D6C3700D18337 /* AuthorizationViewModel.swift in Sources */,
 				856833B9231C22EB00D18337 /* BaseCoordinator.swift in Sources */,
+				85683449231D728F00D18337 /* StringExtensions.swift in Sources */,
 				85683402231D551300D18337 /* RouterImp.swift in Sources */,
 				856833C4231C232600D18337 /* Coordinatable.swift in Sources */,
 				856833F8231D515700D18337 /* CoordinatorFactory.swift in Sources */,
@@ -529,6 +559,7 @@
 				85683421231D5B2600D18337 /* UIViewControllerExtensions.swift in Sources */,
 				85683405231D55B600D18337 /* TopUIViewController.swift in Sources */,
 				8568342D231D614900D18337 /* LoaderCoordinator.swift in Sources */,
+				8568344E231D789D00D18337 /* R.generated.swift in Sources */,
 				8568341B231D592E00D18337 /* LoadingViewController.swift in Sources */,
 				85683409231D56F000D18337 /* ModuleFactoryList.swift in Sources */,
 				856833BE231C22F500D18337 /* AppDelegate.swift in Sources */,
@@ -537,8 +568,9 @@
 				856833BD231C22F500D18337 /* ApplicationCoordinator.swift in Sources */,
 				85683413231D57D200D18337 /* LoadingViewInput.swift in Sources */,
 				85683431231D644000D18337 /* UIApplicationExtensions.swift in Sources */,
-				85683443231D6C5300D18337 /* AuthorizatioViewInput.swift in Sources */,
-				85683445231D6C7E00D18337 /* AuthorizatioViewController.swift in Sources */,
+				85683443231D6C5300D18337 /* AuthorizationViewInput.swift in Sources */,
+				85683445231D6C7E00D18337 /* AuthorizationViewController.swift in Sources */,
+				8568344B231D72D300D18337 /* Constants.swift in Sources */,
 				85683400231D548700D18337 /* Presentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

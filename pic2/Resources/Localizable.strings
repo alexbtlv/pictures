@@ -1,2 +1,12 @@
 
+// MARK: Loading
+
 "Loading.Title" = "Loading...";
+
+// MARK: Auth
+"Auth.Tip" = "Please enter any valid email and passowrd of at least 6 any characters";
+
+// MARK: Words
+"Email.Word" = "Email";
+"Password.Word" = "Password";
+"Login.Word" = "Login";

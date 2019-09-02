@@ -16,7 +16,7 @@ final class ModuleFactoryImp: ModuleFactoryList {
     
     // MARK: - AuthModuleFactory
     
-    func makeAuthModule() -> AuthorizatioViewInput & AuthorizatioViewOutput {
-        return AuthorizatioViewController.controllerFromStoryboard(.auth)
+    func makeAuthModule() -> AuthorizationViewInput & AuthorizationViewOutput {
+        return AuthorizationViewController.controllerFromStoryboard(.auth)
     }
 }
