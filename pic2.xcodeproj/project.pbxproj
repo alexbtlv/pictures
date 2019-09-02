@@ -58,6 +58,13 @@
 		8568345C231D81AB00D18337 /* MainModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568345B231D81AB00D18337 /* MainModuleFactory.swift */; };
 		8568345E231D8BF800D18337 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568345D231D8BF800D18337 /* ActivityIndicator.swift */; };
 		85683461231D8CF400D18337 /* PhotosResponseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683460231D8CF400D18337 /* PhotosResponseResult.swift */; };
+		85683463231D960000D18337 /* MainSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683462231D960000D18337 /* MainSectionModel.swift */; };
+		85683467231D967E00D18337 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683465231D967E00D18337 /* PhotoTableViewCell.swift */; };
+		85683468231D967E00D18337 /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85683466231D967E00D18337 /* PhotoTableViewCell.xib */; };
+		8568346A231D96AA00D18337 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683469231D96AA00D18337 /* BaseTableViewCell.swift */; };
+		8568346C231D96E300D18337 /* CellInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568346B231D96E300D18337 /* CellInterface.swift */; };
+		8568346E231D983800D18337 /* PhotoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568346D231D983800D18337 /* PhotoCellViewModel.swift */; };
+		85683470231D9E3E00D18337 /* TableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568346F231D9E3E00D18337 /* TableViewExtensions.swift */; };
 		C9666CC78F9E790CC9524A4A /* Pods_pic2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE7D85D6C35EAB245399CA2 /* Pods_pic2.framework */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +125,13 @@
 		8568345B231D81AB00D18337 /* MainModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModuleFactory.swift; sourceTree = "<group>"; };
 		8568345D231D8BF800D18337 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		85683460231D8CF400D18337 /* PhotosResponseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosResponseResult.swift; sourceTree = "<group>"; };
+		85683462231D960000D18337 /* MainSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSectionModel.swift; sourceTree = "<group>"; };
+		85683465231D967E00D18337 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		85683466231D967E00D18337 /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
+		85683469231D96AA00D18337 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		8568346B231D96E300D18337 /* CellInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellInterface.swift; sourceTree = "<group>"; };
+		8568346D231D983800D18337 /* PhotoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellViewModel.swift; sourceTree = "<group>"; };
+		8568346F231D9E3E00D18337 /* TableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtensions.swift; sourceTree = "<group>"; };
 		BB859FC06BEE7D9AD8260D58 /* Pods-pic2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pic2.release.xcconfig"; path = "Target Support Files/Pods-pic2/Pods-pic2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +198,7 @@
 				856833B8231C22EB00D18337 /* BaseCoordinator.swift */,
 				8568341C231D5A2900D18337 /* BaseViewController.swift */,
 				8568342E231D633700D18337 /* CustomNavigationController.swift */,
+				85683469231D96AA00D18337 /* BaseTableViewCell.swift */,
 			);
 			path = Parents;
 			sourceTree = "<group>";
@@ -212,6 +227,7 @@
 				856833C3231C232600D18337 /* Coordinatable.swift */,
 				856833FF231D548700D18337 /* Presentable.swift */,
 				85683416231D583B00D18337 /* BaseView.swift */,
+				8568346B231D96E300D18337 /* CellInterface.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -271,6 +287,7 @@
 				8568341E231D5A8B00D18337 /* NSObjectExtensions.swift */,
 				85683430231D644000D18337 /* UIApplicationExtensions.swift */,
 				85683448231D728F00D18337 /* StringExtensions.swift */,
+				8568346F231D9E3E00D18337 /* TableViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -411,6 +428,7 @@
 		85683451231D7FE400D18337 /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
+				85683464231D965400D18337 /* Cells */,
 				85683452231D803000D18337 /* ViewModel */,
 				85683455231D806100D18337 /* MainViewInput.swift */,
 				85683457231D80A200D18337 /* MainViewOutput.swift */,
@@ -423,6 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				85683453231D804500D18337 /* MainViewModel.swift */,
+				85683462231D960000D18337 /* MainSectionModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -433,6 +452,16 @@
 				85683460231D8CF400D18337 /* PhotosResponseResult.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		85683464231D965400D18337 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				85683465231D967E00D18337 /* PhotoTableViewCell.swift */,
+				85683466231D967E00D18337 /* PhotoTableViewCell.xib */,
+				8568346D231D983800D18337 /* PhotoCellViewModel.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		FF84ADA28CDD51E2FC8EFDFD /* Pods */ = {
@@ -512,6 +541,7 @@
 				85683450231D7DF700D18337 /* Main.storyboard in Resources */,
 				856833AD231C22DB00D18337 /* Assets.xcassets in Resources */,
 				856833AB231C22DB00D18337 /* Load.storyboard in Resources */,
+				85683468231D967E00D18337 /* PhotoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,11 +615,13 @@
 			files = (
 				8568343B231D6B2300D18337 /* AuthModuleFactory.swift in Sources */,
 				856833FE231D544000D18337 /* Router.swift in Sources */,
+				85683467231D967E00D18337 /* PhotoTableViewCell.swift in Sources */,
 				856833C1231C231E00D18337 /* ClosureTypealiases.swift in Sources */,
 				85683424231D5B6600D18337 /* StoryboardsEnum.swift in Sources */,
 				8568340C231D572D00D18337 /* LoaderModuleFactory.swift in Sources */,
 				85683454231D804500D18337 /* MainViewModel.swift in Sources */,
 				8568345C231D81AB00D18337 /* MainModuleFactory.swift in Sources */,
+				85683470231D9E3E00D18337 /* TableViewExtensions.swift in Sources */,
 				85683456231D806100D18337 /* MainViewInput.swift in Sources */,
 				85683417231D583B00D18337 /* BaseView.swift in Sources */,
 				8568343E231D6BD900D18337 /* AuthorizationViewOutput.swift in Sources */,
@@ -598,6 +630,7 @@
 				8568342A231D602A00D18337 /* APIProvider.swift in Sources */,
 				85683441231D6C3700D18337 /* AuthorizationViewModel.swift in Sources */,
 				856833B9231C22EB00D18337 /* BaseCoordinator.swift in Sources */,
+				8568346A231D96AA00D18337 /* BaseTableViewCell.swift in Sources */,
 				85683449231D728F00D18337 /* StringExtensions.swift in Sources */,
 				8568345E231D8BF800D18337 /* ActivityIndicator.swift in Sources */,
 				85683402231D551300D18337 /* RouterImp.swift in Sources */,
@@ -613,16 +646,19 @@
 				85683421231D5B2600D18337 /* UIViewControllerExtensions.swift in Sources */,
 				85683405231D55B600D18337 /* TopUIViewController.swift in Sources */,
 				8568342D231D614900D18337 /* LoaderCoordinator.swift in Sources */,
+				85683463231D960000D18337 /* MainSectionModel.swift in Sources */,
 				8568344E231D789D00D18337 /* R.generated.swift in Sources */,
 				8568341B231D592E00D18337 /* LoadingViewController.swift in Sources */,
 				85683409231D56F000D18337 /* ModuleFactoryList.swift in Sources */,
 				856833BE231C22F500D18337 /* AppDelegate.swift in Sources */,
+				8568346E231D983800D18337 /* PhotoCellViewModel.swift in Sources */,
 				85683419231D58E500D18337 /* ModuleFactoryImp.swift in Sources */,
 				85683415231D580500D18337 /* LoadingViewOutput.swift in Sources */,
 				856833BD231C22F500D18337 /* ApplicationCoordinator.swift in Sources */,
 				85683413231D57D200D18337 /* LoadingViewInput.swift in Sources */,
 				85683431231D644000D18337 /* UIApplicationExtensions.swift in Sources */,
 				85683443231D6C5300D18337 /* AuthorizationViewInput.swift in Sources */,
+				8568346C231D96E300D18337 /* CellInterface.swift in Sources */,
 				85683445231D6C7E00D18337 /* AuthorizationViewController.swift in Sources */,
 				8568344B231D72D300D18337 /* Constants.swift in Sources */,
 				85683400231D548700D18337 /* Presentable.swift in Sources */,

@@ -25,6 +25,7 @@ target 'pic2' do
   
   # Utilities
   pod 'IQKeyboardManagerSwift'
+  pod 'Kingfisher'
   
   # UI
   pod 'SkyFloatingLabelTextField'

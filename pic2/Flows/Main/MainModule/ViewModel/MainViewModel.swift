@@ -12,12 +12,20 @@ final class MainViewModel {
     private let provider: MoyaProvider<APIProvider>
     private let activityIndicator = ActivityIndicator()
     private let disposeBag = DisposeBag()
+    private var photos = [Photo]() {
+        didSet {
+            setupSections()
+        }
+    }
     
     // MARK: Public properties
     let page = BehaviorRelay<Int>(value: 1)
+    let sections = BehaviorRelay<[MainSectionModel]>(value: [])
+    let executing: Driver<Bool>
     
     init(provider: MoyaProvider<APIProvider>) {
         self.provider = provider
+        executing = activityIndicator.asDriver()
         getPhotos()
     }
     
@@ -27,7 +35,7 @@ final class MainViewModel {
             guard let self = self else { return }
             switch result {
             case .success(let photos):
-                print("SUCCESS", photos)
+                self.photos = photos
             case .failed(let message):
                 print("FAILED TO GET PHOTOS",message)
             }
@@ -43,5 +51,10 @@ final class MainViewModel {
             .map { pics in
                 return PhotosResponseResult.success(photos: pics)
             }.asObservable()
+    }
+    
+    private func setupSections() {
+        let items = photos.map { MainSectionItem.photo(cellViewModel: PhotoCellViewModel(photo: $0)) }
+        sections.accept([.main(items: items)])
     }
 }
