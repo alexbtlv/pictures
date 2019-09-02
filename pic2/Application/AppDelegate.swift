@@ -23,9 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func makeCoordinator() -> Coordinatable {
         return ApplicationCoordinator(
             router: RouterImp(rootController: self.rootController),
-            coordinatorFactory: CoordinatorFactoryImp(),
-            tokenAccessable: Dependencies.sharedDependencies.cache
-        )
+            coordinatorFactory: CoordinatorFactoryImp())
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

@@ -19,7 +19,6 @@ private enum LaunchInstructor {
 
 final class ApplicationCoordinator: BaseCoordinator {
     private let coordinatorFactory: CoordinatorFactory
-    private let tokenAccessable: TokenAccessable
     private let router: Router
     
     private var instructor: LaunchInstructor {
@@ -27,22 +26,17 @@ final class ApplicationCoordinator: BaseCoordinator {
         return LaunchInstructor.configure(isAuthorized: true)
     }
     
-    init(router: Router, coordinatorFactory: CoordinatorFactory, tokenAccessable: TokenAccessable) {
+    init(router: Router, coordinatorFactory: CoordinatorFactory) {
         self.router = router
         self.coordinatorFactory = coordinatorFactory
-        self.tokenAccessable = tokenAccessable
     }
     
     override func start() {
         runLoadingFlow()
     }
     
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
-    private func runAuthFlow() {
-        let coordinator = coordinatorFactory.makeAuthCoordinator(router: router)
+    private func runLoadingFlow() {
+        let coordinator = coordinatorFactory.makeLoaderCoordinator(router: router)
         coordinator.finishFlow = { [weak self, weak coordinator] in
             self?.start()
             self?.removeDependency(coordinator)
@@ -51,13 +45,23 @@ final class ApplicationCoordinator: BaseCoordinator {
         coordinator.start()
     }
     
-    private func runMainFlow() {
-        let coordinator = coordinatorFactory.makeMenuCoordinator(router: router)
-        coordinator.finishFlow = { [weak self, weak coordinator] in
-            self?.start()
-            self?.removeDependency(coordinator)
-        }
-        addDependency(coordinator)
-        coordinator.start()
-    }
+//    private func runAuthFlow() {
+//        let coordinator = coordinatorFactory.makeAuthCoordinator(router: router)
+//        coordinator.finishFlow = { [weak self, weak coordinator] in
+//            self?.start()
+//            self?.removeDependency(coordinator)
+//        }
+//        addDependency(coordinator)
+//        coordinator.start()
+//    }
+//
+//    private func runMainFlow() {
+//        let coordinator = coordinatorFactory.makeMenuCoordinator(router: router)
+//        coordinator.finishFlow = { [weak self, weak coordinator] in
+//            self?.start()
+//            self?.removeDependency(coordinator)
+//        }
+//        addDependency(coordinator)
+//        coordinator.start()
+//    }
 }
