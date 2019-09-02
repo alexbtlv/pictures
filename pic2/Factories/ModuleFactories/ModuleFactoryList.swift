@@ -6,4 +6,5 @@
 //  Copyright © 2019 Alexander Batalov. All rights reserved.
 //
 
-protocol ModuleFactoryList: LoaderModuleFactory {}
+protocol ModuleFactoryList: LoaderModuleFactory,
+                            AuthModuleFactory {}

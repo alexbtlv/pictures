@@ -12,6 +12,14 @@ final class CoordinatorFactoryImp: CoordinatorFactory {
         return LoaderCoordinator(with: ModuleFactoryImp(), router: router)
     }
     
+    func makeAuthCoordinator(router: Router) -> Coordinatable {
+        return AuthenticationCoordinator(with: ModuleFactoryImp(), router: router)
+    }
+    
+//    func makeMainCoordinator(router: Router) -> Coordinatable {
+//        <#code#>
+//    }
+    
     // MARK: - Private methods
     
     private func router(_ navController: UINavigationController?) -> Router {

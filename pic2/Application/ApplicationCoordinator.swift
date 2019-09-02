@@ -7,13 +7,12 @@
 //
 
 private enum LaunchInstructor {
-    case main, auth
+//    case main
+    case auth
     
     static func configure(isAuthorized: Bool = false ) -> LaunchInstructor {
-        switch (isAuthorized) {
-        case false: return .auth
-        case true: return .main
-        }
+        if isAuthorized { return .auth }
+        return .auth
     }
 }
 
@@ -22,7 +21,7 @@ final class ApplicationCoordinator: BaseCoordinator {
     private let router: Router
     
     private var instructor: LaunchInstructor {
-        //        return LaunchInstructor.configure(isAuthorized: self.tokenAccessable.token != nil)
+        //        return LaunchInstructor.configure(isAuthorized: token != nil)
         return LaunchInstructor.configure(isAuthorized: true)
     }
     
@@ -38,6 +37,23 @@ final class ApplicationCoordinator: BaseCoordinator {
     private func runLoadingFlow() {
         let coordinator = coordinatorFactory.makeLoaderCoordinator(router: router)
         coordinator.finishFlow = { [weak self, weak coordinator] in
+            self?.runInstructor()
+            self?.removeDependency(coordinator)
+        }
+        addDependency(coordinator)
+        coordinator.start()
+    }
+    
+    private func runInstructor() {
+        switch instructor {
+        case .auth: runAuthFlow()
+//        case .main: runMainFlow()
+        }
+    }
+    
+    private func runAuthFlow() {
+        let coordinator = coordinatorFactory.makeAuthCoordinator(router: router)
+        coordinator.finishFlow = { [weak self, weak coordinator] in
             self?.start()
             self?.removeDependency(coordinator)
         }
@@ -45,18 +61,8 @@ final class ApplicationCoordinator: BaseCoordinator {
         coordinator.start()
     }
     
-//    private func runAuthFlow() {
-//        let coordinator = coordinatorFactory.makeAuthCoordinator(router: router)
-//        coordinator.finishFlow = { [weak self, weak coordinator] in
-//            self?.start()
-//            self?.removeDependency(coordinator)
-//        }
-//        addDependency(coordinator)
-//        coordinator.start()
-//    }
-//
 //    private func runMainFlow() {
-//        let coordinator = coordinatorFactory.makeMenuCoordinator(router: router)
+//        let coordinator = coordinatorFactory.makeMainCoordinator(router: router)
 //        coordinator.finishFlow = { [weak self, weak coordinator] in
 //            self?.start()
 //            self?.removeDependency(coordinator)

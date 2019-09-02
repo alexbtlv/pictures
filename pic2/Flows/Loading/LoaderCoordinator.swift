@@ -6,12 +6,10 @@
 //  Copyright © 2019 Alexander Batalov. All rights reserved.
 //
 
-class LoaderCoordinator: BaseCoordinator {
+final class LoaderCoordinator: BaseCoordinator {
     
     private let factory: LoaderModuleFactory
     private let router: Router
-    
-    private var loaderModule: (LoadingViewInput & LoadingViewOutput)?
     
     init(with factory: LoaderModuleFactory, router: Router) {
         self.factory = factory
@@ -20,10 +18,17 @@ class LoaderCoordinator: BaseCoordinator {
     
     override func start() {
         showLoaderModule()
+        loadSomething()
     }
     
     private func showLoaderModule() {
-        loaderModule = factory.makeLoaderModule()
+        let loaderModule = factory.makeLoaderModule()
         router.setRootModule(loaderModule)
+    }
+    
+    private func loadSomething() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
+            self?.finishFlow?()
+        }
     }
 }
