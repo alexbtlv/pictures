@@ -9,31 +9,48 @@
 import Foundation
 
 enum APIProvider {
-    
+    case getPhotos(page: Int)
 }
 
-//extension APIProvider: TargetType {
-//    var baseURL: URL {
-//        <#code#>
-//    }
-//
-//    var path: String {
-//        <#code#>
-//    }
-//
-//    var method: Method {
-//        <#code#>
-//    }
-//
-//    var sampleData: Data {
-//        <#code#>
-//    }
-//
-//    var task: Task {
-//        <#code#>
-//    }
-//
-//    var headers: [String : String]? {
-//        <#code#>
-//    }
-//}
+extension APIProvider: TargetType {
+    var baseURL: URL {
+        return URL(string: "https://picsum.photos/")!
+    }
+
+    var path: String {
+        switch self {
+        case .getPhotos:
+            return "v2/list"
+        }
+    }
+
+    var method: Moya.Method {
+        switch self {
+        case .getPhotos:
+            return .get
+        }
+    }
+
+    var sampleData: Data {
+        return Data()
+    }
+    
+    var parameters: [String: Any]? {
+        switch self {
+        case .getPhotos(let page):
+            return [ParameterKey.page : page]
+        }
+    }
+    
+    var parameterEncoding: ParameterEncoding {
+        return URLEncoding.default
+    }
+    
+    var task: Task {
+        return Task.requestParameters(parameters: parameters!, encoding: parameterEncoding)
+    }
+
+    var headers: [String : String]? {
+        return nil
+    }
+}

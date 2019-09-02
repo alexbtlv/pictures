@@ -10,10 +10,12 @@ final class MainCoordinator: BaseCoordinator {
     
     private let factory: MainModuleFactory
     private let router: Router
+    private let provider: MoyaProvider<APIProvider>
     
     init(with factory: MainModuleFactory, router: Router) {
         self.factory = factory
         self.router = router
+        self.provider = Dependencies.sharedDependencies.provider
     }
     
     override func start() {
@@ -22,7 +24,7 @@ final class MainCoordinator: BaseCoordinator {
     
     private func showMainModule() {
         var view = factory.makeMainModule()
-        view.viewModel = MainViewModel()
+        view.viewModel = MainViewModel(provider: provider)
         router.setRootModule(view)
     }
 }

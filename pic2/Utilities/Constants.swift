@@ -12,3 +12,7 @@ enum Constants {
     // MARK: User Defaults keys
     static let authorizedKey = "UserIsAuthorized"
 }
+
+enum ParameterKey {
+    static let page = "page"
+}

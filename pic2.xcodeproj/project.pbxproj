@@ -56,6 +56,8 @@
 		85683458231D80A200D18337 /* MainViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683457231D80A200D18337 /* MainViewOutput.swift */; };
 		8568345A231D80C600D18337 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683459231D80C600D18337 /* MainViewController.swift */; };
 		8568345C231D81AB00D18337 /* MainModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568345B231D81AB00D18337 /* MainModuleFactory.swift */; };
+		8568345E231D8BF800D18337 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568345D231D8BF800D18337 /* ActivityIndicator.swift */; };
+		85683461231D8CF400D18337 /* PhotosResponseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85683460231D8CF400D18337 /* PhotosResponseResult.swift */; };
 		C9666CC78F9E790CC9524A4A /* Pods_pic2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE7D85D6C35EAB245399CA2 /* Pods_pic2.framework */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +116,8 @@
 		85683457231D80A200D18337 /* MainViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewOutput.swift; sourceTree = "<group>"; };
 		85683459231D80C600D18337 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8568345B231D81AB00D18337 /* MainModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModuleFactory.swift; sourceTree = "<group>"; };
+		8568345D231D8BF800D18337 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		85683460231D8CF400D18337 /* PhotosResponseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosResponseResult.swift; sourceTree = "<group>"; };
 		BB859FC06BEE7D9AD8260D58 /* Pods-pic2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pic2.release.xcconfig"; path = "Target Support Files/Pods-pic2/Pods-pic2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -344,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				85683426231D5F7300D18337 /* Dependencies.swift */,
+				8568345D231D8BF800D18337 /* ActivityIndicator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -351,6 +356,7 @@
 		85683428231D601200D18337 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				8568345F231D8CD100D18337 /* Models */,
 				85683429231D602A00D18337 /* APIProvider.swift */,
 			);
 			path = Networking;
@@ -419,6 +425,14 @@
 				85683453231D804500D18337 /* MainViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8568345F231D8CD100D18337 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				85683460231D8CF400D18337 /* PhotosResponseResult.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FF84ADA28CDD51E2FC8EFDFD /* Pods */ = {
@@ -585,6 +599,7 @@
 				85683441231D6C3700D18337 /* AuthorizationViewModel.swift in Sources */,
 				856833B9231C22EB00D18337 /* BaseCoordinator.swift in Sources */,
 				85683449231D728F00D18337 /* StringExtensions.swift in Sources */,
+				8568345E231D8BF800D18337 /* ActivityIndicator.swift in Sources */,
 				85683402231D551300D18337 /* RouterImp.swift in Sources */,
 				856833C4231C232600D18337 /* Coordinatable.swift in Sources */,
 				856833F8231D515700D18337 /* CoordinatorFactory.swift in Sources */,
@@ -612,6 +627,7 @@
 				8568344B231D72D300D18337 /* Constants.swift in Sources */,
 				85683400231D548700D18337 /* Presentable.swift in Sources */,
 				85683458231D80A200D18337 /* MainViewOutput.swift in Sources */,
+				85683461231D8CF400D18337 /* PhotosResponseResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

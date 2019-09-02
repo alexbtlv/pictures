@@ -14,11 +14,11 @@ class Dependencies {
     static let sharedDependencies = Dependencies()
     
     let keyboardManager = IQKeyboardManager.shared
-//    let provider: MoyaProvider<APIProvider>
+    let provider: MoyaProvider<APIProvider>
     
     private init() {
         keyboardManager.enable = true
-//        provider = MoyaProvider<APIProvider>()
+        provider = MoyaProvider<APIProvider>()
         SVProgressHUD.setDefaultMaskType(.clear)
     }
 }
