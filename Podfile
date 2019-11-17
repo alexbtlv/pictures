@@ -7,19 +7,19 @@ target 'pic2' do
   use_frameworks!
   
   # Autocomplete & Code Style
-  pod 'R.swift', '~> 5.0.3'
+  pod 'R.swift'
 #  pod 'SwiftLint'
 
   # Reactive
   pod 'RxSwift'
-  pod 'RxCocoa',    '~> 4.0'
-  pod 'RxDataSources', '~> 3.0'
+  pod 'RxCocoa'
+  pod 'RxDataSources'
   pod 'RxGesture'
   
   # Data Storage
   
   # Networking
-  pod 'Moya/RxSwift', '~> 11.0'
+  pod 'Moya/RxSwift'
   
   # Autolayout
   

@@ -51,7 +51,7 @@ final class CustomNavigationController: UINavigationController {
     private func configureUI() {
         navigationBar.removeFromSuperview()
         view.backgroundColor = .white
-        UIApplication.statusBarBackgroundColor = .white
+//        UIApplication.statusBarBackgroundColor = .white
         delegate = self
     }
     
@@ -79,4 +79,3 @@ extension CustomNavigationController: UIGestureRecognizerDelegate {
         return viewControllers.count > 1 && duringPushAnimation == false
     }
 }
-

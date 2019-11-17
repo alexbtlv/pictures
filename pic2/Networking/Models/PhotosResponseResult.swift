@@ -11,17 +11,6 @@ enum PhotosResponseResult {
     case failed(message: String)
 }
 
-struct Photo: Decodable {
-    let id: String
-    let author: String
-    let url: String
-    let downloadUrl: String
-    
-    private enum CodingKeys : String, CodingKey {
-        case id, author, url, downloadUrl = "download_url"
-    }
-}
-
 struct PhotosResponseModel: Decodable {
     let photos: [Photo]
 }

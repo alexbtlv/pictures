@@ -65,6 +65,7 @@
 		8568346C231D96E300D18337 /* CellInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568346B231D96E300D18337 /* CellInterface.swift */; };
 		8568346E231D983800D18337 /* PhotoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568346D231D983800D18337 /* PhotoCellViewModel.swift */; };
 		85683470231D9E3E00D18337 /* TableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8568346F231D9E3E00D18337 /* TableViewExtensions.swift */; };
+		85845DA12381192300718619 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85845DA02381192300718619 /* Photo.swift */; };
 		C9666CC78F9E790CC9524A4A /* Pods_pic2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE7D85D6C35EAB245399CA2 /* Pods_pic2.framework */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +133,7 @@
 		8568346B231D96E300D18337 /* CellInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellInterface.swift; sourceTree = "<group>"; };
 		8568346D231D983800D18337 /* PhotoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCellViewModel.swift; sourceTree = "<group>"; };
 		8568346F231D9E3E00D18337 /* TableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtensions.swift; sourceTree = "<group>"; };
+		85845DA02381192300718619 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		BB859FC06BEE7D9AD8260D58 /* Pods-pic2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pic2.release.xcconfig"; path = "Target Support Files/Pods-pic2/Pods-pic2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,6 +187,7 @@
 				85683425231D5EF100D18337 /* Services */,
 				856833C2231C232600D18337 /* Protocols */,
 				856833BF231C231E00D18337 /* Utilities */,
+				85845D9F2381191000718619 /* Models */,
 				8568340D231D576400D18337 /* Flows */,
 				85683422231D5B4E00D18337 /* Storyboards */,
 				856833C9231C235700D18337 /* Resources */,
@@ -464,6 +467,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		85845D9F2381191000718619 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				85845DA02381192300718619 /* Photo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FF84ADA28CDD51E2FC8EFDFD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -645,6 +656,7 @@
 				8568341F231D5A8B00D18337 /* NSObjectExtensions.swift in Sources */,
 				85683421231D5B2600D18337 /* UIViewControllerExtensions.swift in Sources */,
 				85683405231D55B600D18337 /* TopUIViewController.swift in Sources */,
+				85845DA12381192300718619 /* Photo.swift in Sources */,
 				8568342D231D614900D18337 /* LoaderCoordinator.swift in Sources */,
 				85683463231D960000D18337 /* MainSectionModel.swift in Sources */,
 				8568344E231D789D00D18337 /* R.generated.swift in Sources */,
@@ -814,6 +826,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M7NRPN43W5;
 				INFOPLIST_FILE = pic2/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -823,7 +836,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "pic2/Resources/pic2-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -836,6 +849,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M7NRPN43W5;
 				INFOPLIST_FILE = pic2/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -844,7 +858,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "pic2/Resources/pic2-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

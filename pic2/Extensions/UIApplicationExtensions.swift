@@ -7,13 +7,13 @@
 //
 
 extension UIApplication {
-    class var statusBarBackgroundColor: UIColor? {
-        get {
-            return (shared.value(forKey: "statusBar") as? UIView)?.backgroundColor
-        } set {
-            (shared.value(forKey: "statusBar") as? UIView)?.backgroundColor = newValue
-        }
-    }
+//    class var statusBarBackgroundColor: UIColor? {
+//        get {
+//            return (shared.value(forKey: "statusBar") as? UIView)?.backgroundColor
+//        } set {
+//            (shared.value(forKey: "statusBar") as? UIView)?.backgroundColor = newValue
+//        }
+//    }
     
     class func topViewController(viewController: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
         if let nav = viewController as? UINavigationController {
