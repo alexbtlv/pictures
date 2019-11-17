@@ -43,8 +43,6 @@ final class MainViewModel {
     }
     
     private func photosRequestObservable() -> Observable<PhotosResponseResult> {
-//        provider.request(., completion: <#T##Completion##Completion##(Result<Response, MoyaError>) -> Void#>)
-        
         return provider.rx.request(.getPhotos(page: page.value))
             .retry(3)
             .trackActivity(activityIndicator)
