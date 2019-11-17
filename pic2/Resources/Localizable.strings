@@ -6,7 +6,11 @@
 // MARK: Auth
 "Auth.Tip" = "Please enter any valid email and passowrd of at least 6 any characters";
 
+// MARK: Main
+"Photos.List.Networking.Error.Title" = "Oops, something went wrong.";
+
 // MARK: Words
 "Email.Word" = "Email";
 "Password.Word" = "Password";
 "Login.Word" = "Login";
+"Ok.Word" = "Ok";

@@ -169,7 +169,7 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 5 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 7 localization keys.
     struct localizable {
       /// Value: Email
       static let emailWord = Rswift.StringResource(key: "Email.Word", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
@@ -177,6 +177,10 @@ struct R: Rswift.Validatable {
       static let loadingTitle = Rswift.StringResource(key: "Loading.Title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Login
       static let loginWord = Rswift.StringResource(key: "Login.Word", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Ok
+      static let okWord = Rswift.StringResource(key: "Ok.Word", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Oops, something went wrong.
+      static let photosListNetworkingErrorTitle = Rswift.StringResource(key: "Photos.List.Networking.Error.Title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Password
       static let passwordWord = Rswift.StringResource(key: "Password.Word", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Please enter any valid email and passowrd of at least 6 any characters
@@ -219,6 +223,32 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("Login.Word", bundle: bundle, comment: "")
+      }
+
+      /// Value: Ok
+      static func okWord(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("Ok.Word", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "Ok.Word"
+        }
+
+        return NSLocalizedString("Ok.Word", bundle: bundle, comment: "")
+      }
+
+      /// Value: Oops, something went wrong.
+      static func photosListNetworkingErrorTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("Photos.List.Networking.Error.Title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "Photos.List.Networking.Error.Title"
+        }
+
+        return NSLocalizedString("Photos.List.Networking.Error.Title", bundle: bundle, comment: "")
       }
 
       /// Value: Password

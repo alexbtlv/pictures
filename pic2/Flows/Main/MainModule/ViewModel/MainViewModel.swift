@@ -37,7 +37,8 @@ final class MainViewModel {
             case .success(let photos):
                 self.photos = photos
             case .failed(let message):
-                print("FAILED TO GET PHOTOS",message)
+                let title = R.string.localizable.photosListNetworkingErrorTitle()
+                DefaultWireframe.shared.showAlert(title: title, message: message)
             }
         }).disposed(by: disposeBag)
     }

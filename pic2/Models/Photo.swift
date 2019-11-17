@@ -6,7 +6,7 @@
 //  Copyright © 2019 Alexander Batalov. All rights reserved.
 //
 
-struct Photo: Decodable {
+struct Photo: Codable {
     let id: String
     let author: String
     let url: String
