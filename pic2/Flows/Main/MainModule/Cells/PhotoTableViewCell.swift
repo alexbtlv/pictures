@@ -10,13 +10,20 @@ final class PhotoTableViewCell: BaseTableViewCell, CellInterface {
     
     // MARK: Outlets
     
-    @IBOutlet private weak var myImageView: UIImageView!
+    @IBOutlet private weak var myImageView: UIImageView! {
+        didSet {
+            myImageView.kf.indicatorType = .activity
+        }
+    }
+    
+    override func prepareForReuse() {
+           super.prepareForReuse()
+           myImageView.kf.cancelDownloadTask()
+       }
     
     // MARK: Public methods
     
     func configure(with viewModel: PhotoCellViewModel) {
-        myImageView.kf.cancelDownloadTask()
-        myImageView.kf.indicatorType = .activity
         myImageView.kf.setImage(with: viewModel.imageSource, placeholder: R.image.placeholder())
     }
 }
