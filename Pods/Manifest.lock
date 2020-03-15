@@ -1,31 +1,32 @@
 PODS:
-  - Alamofire (4.9.1)
-  - Differentiator (3.1.0)
-  - IQKeyboardManagerSwift (6.5.4)
-  - Kingfisher (5.10.0):
-    - Kingfisher/Core (= 5.10.0)
-  - Kingfisher/Core (5.10.0)
-  - Moya/Core (13.0.1):
-    - Alamofire (~> 4.1)
-    - Result (~> 4.1)
-  - Moya/RxSwift (13.0.1):
+  - Alamofire (5.0.3)
+  - Differentiator (4.0.1)
+  - IQKeyboardManagerSwift (6.5.5)
+  - Kingfisher (5.13.2):
+    - Kingfisher/Core (= 5.13.2)
+  - Kingfisher/Core (5.13.2)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (14.0.0):
     - Moya/Core
-    - RxSwift (~> 4.0)
+    - RxSwift (~> 5.0)
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
   - R.swift.Library (5.1.0)
-  - Result (4.1.0)
-  - RxCocoa (4.5.0):
-    - RxSwift (>= 4.4.2, ~> 4.4)
-  - RxDataSources (3.1.0):
-    - Differentiator (~> 3.0)
-    - RxCocoa (~> 4.0)
-    - RxSwift (~> 4.0)
-  - RxGesture (2.2.0):
-    - RxCocoa (~> 4.5)
-    - RxSwift (~> 4.5)
-  - RxSwift (4.5.0)
-  - SkyFloatingLabelTextField (3.7.0)
+  - RxCocoa (5.1.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxGesture (3.0.1):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.1.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.0)
+  - SkyFloatingLabelTextField (3.8.0)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
@@ -49,30 +50,30 @@ SPEC REPOS:
     - Moya
     - R.swift
     - R.swift.Library
-    - Result
     - RxCocoa
     - RxDataSources
     - RxGesture
+    - RxRelay
     - RxSwift
     - SkyFloatingLabelTextField
     - SVProgressHUD
 
 SPEC CHECKSUMS:
-  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
-  IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
-  Kingfisher: 0bf6eae7c2193f15719915fecb7c2c1c03855f3d
-  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  Alamofire: 7c444099d8ccb6ae7e6fc8f343646d3821d8679b
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
+  Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
-  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
-  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
-  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
-  RxGesture: c1b7bf17166b0ef9d642a9510f8bac5785f18990
-  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
-  SkyFloatingLabelTextField: 4b46db0ab1ccde0919cded29c656e6b4805eda04
+  RxCocoa: 13d2a4d7546a34b8ececae8c281e4ea1dbb94f2b
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxGesture: a3f8dd6adf078110ed5e1c9c30d09d705a09852e
+  RxRelay: a168bd6caf712d00c676ac344e9295afc93b418e
+  RxSwift: ad5874f24bb0dbffd1e9bb8443604e3578796c7a
+  SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
 PODFILE CHECKSUM: 9287807dbaa66ea5072b435f318facb17b88be87
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1
