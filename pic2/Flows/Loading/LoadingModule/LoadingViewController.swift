@@ -6,17 +6,4 @@
 //  Copyright © 2019 Alexander Batalov. All rights reserved.
 //
 
-final class LoadingViewController: BaseViewController, LoadingViewInput, LoadingViewOutput {
-    
-    // MARK: Input
-    var viewModel: LoadingViewModel?
-    
-    // MARK: Output
-
-    // MARK: Lifecycle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-}
+final class LoadingViewController: BaseViewController, LoadingViewInput, LoadingViewOutput {}

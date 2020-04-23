@@ -6,6 +6,4 @@
 //  Copyright © 2019 Alexander Batalov. All rights reserved.
 //
 
-final class LoadingViewModel {
-    
-}
+final class LoadingViewModel {}

@@ -21,6 +21,7 @@ final class MainViewModel {
     let page = BehaviorRelay<Int>(value: 1)
     let sections = BehaviorRelay<[MainSectionModel]>(value: [])
     let executing = BehaviorRelay(value: false)
+    let error = BehaviorRelay<String?>(value: nil)
     
     init(provider: MoyaProvider<APIProvider>) {
         self.provider = provider
@@ -37,8 +38,7 @@ final class MainViewModel {
                     self?.photos = photos
                 }
             case .failure(let error):
-                let title = R.string.localizable.photosListNetworkingErrorTitle()
-                DefaultWireframe.shared.showAlert(title: title, message: error.errorDescription)
+                self?.error.accept(error.failureReason)
             }
         }
     }

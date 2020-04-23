@@ -22,8 +22,8 @@ final class LoaderCoordinator: BaseCoordinator {
     }
     
     private func showLoaderModule() {
-        let loaderModule = factory.makeLoaderModule()
-        router.setRootModule(loaderModule)
+        let loader = factory.makeLoaderModule()
+        router.setRootModule(loader)
     }
     
     private func loadSomething() {

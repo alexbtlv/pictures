@@ -10,12 +10,12 @@ final class MainCoordinator: BaseCoordinator {
     
     private let factory: MainModuleFactory
     private let router: Router
-    private let provider: MoyaProvider<APIProvider>
+    private let wireFrame: Wireframe
     
-    init(with factory: MainModuleFactory, router: Router) {
+    init(with factory: MainModuleFactory, router: Router, wireFrame: Wireframe) {
         self.factory = factory
         self.router = router
-        self.provider = Dependencies.sharedDependencies.provider
+        self.wireFrame = wireFrame
     }
     
     override func start() {
@@ -23,9 +23,12 @@ final class MainCoordinator: BaseCoordinator {
     }
     
     private func showMainModule() {
-        var view = factory.makeMainModule()
-        view.viewModel = MainViewModel(provider: provider)
-        router.setRootModule(view)
+        let main = factory.makeMainModule()
+        main.onErrorLoadingPhotos = { [weak self] message in
+            let title = R.string.localizable.photosListNetworkingErrorTitle()
+            self?.wireFrame.showAlert(title: title, message: message)
+        }
+        router.setRootModule(main)
     }
 }
 

@@ -18,21 +18,11 @@ final class AuthorizationViewModel {
     let loginButtonTitle = R.string.localizable.loginWord()
     let email = BehaviorRelay<String>(value: "")
     let password = BehaviorRelay<String>(value: "")
-    let isValid = BehaviorRelay(value: false)
+    let isValid: Observable<Bool>
     
     init() {
-        email.subscribe(onNext: { [weak self] _ in
-            self?.validateData()
-        }).disposed(by: disposeBag)
-        
-        password.subscribe(onNext: { [weak self] _ in
-            self?.validateData()
-        }).disposed(by: disposeBag)
-    }
-    
-    private func validateData() {
-        isValid.accept(
-            email.value.isValidEmail() && password.value.count >= 6
-        )
+        isValid = Observable.combineLatest(email.asObservable(), password.asObservable()).map({ (email, pass) in
+            email.isValidEmail() && pass.count >= 6
+        })
     }
 }

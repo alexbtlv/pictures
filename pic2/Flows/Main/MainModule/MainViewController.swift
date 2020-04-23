@@ -12,6 +12,10 @@ final class MainViewController: BaseViewController, MainViewInput, MainViewOutpu
     var viewModel: MainViewModel?
     
     // MARK: Outputs
+    
+    var onErrorLoadingPhotos: StringAction?
+    
+    // MARK: Outlets
     @IBOutlet private weak var tableView: UITableView!
     
     
@@ -39,6 +43,10 @@ final class MainViewController: BaseViewController, MainViewInput, MainViewOutpu
             } else {
                 SVProgressHUD.dismiss()
             }
+        }).disposed(by: disposeBag)
+        
+        viewModel?.error.subscribe(onNext: { [weak self] (errorMessage) in
+            if let message = errorMessage { self?.onErrorLoadingPhotos?(message) }
         }).disposed(by: disposeBag)
     }
     

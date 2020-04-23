@@ -17,7 +17,7 @@ final class CoordinatorFactoryImp: CoordinatorFactory {
     }
     
     func makeMainCoordinator(router: Router) -> Coordinatable {
-        return MainCoordinator(with: ModuleFactoryImp(), router: router)
+        return MainCoordinator(with: ModuleFactoryImp(), router: router, wireFrame: DefaultWireframe.shared)
     }
     
     // MARK: - Private methods

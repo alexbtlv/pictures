@@ -7,5 +7,4 @@
 //
 
 protocol LoadingViewInput {
-    var viewModel: LoadingViewModel? { get set }
 }

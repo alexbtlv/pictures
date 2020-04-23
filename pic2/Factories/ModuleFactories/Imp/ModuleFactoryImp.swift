@@ -23,6 +23,8 @@ final class ModuleFactoryImp: ModuleFactoryList {
     // MARK: - MainModuleFactory
     
     func makeMainModule() -> MainViewInput & MainViewOutput {
-        return MainViewController.controllerFromStoryboard(.main)
+        let viewController = MainViewController.controllerFromStoryboard(.main)
+        viewController.viewModel = MainViewModel(provider: Dependencies.sharedDependencies.provider)
+        return viewController
     }
 }

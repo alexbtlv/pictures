@@ -7,5 +7,5 @@
 //
 
 protocol MainViewOutput: BaseView {
-    
+    var onErrorLoadingPhotos: StringAction? { get set }
 }
