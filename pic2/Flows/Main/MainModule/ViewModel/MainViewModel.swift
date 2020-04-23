@@ -10,7 +10,6 @@ final class MainViewModel {
     
     // MARK: Private properties
     private let provider: MoyaProvider<APIProvider>
-    private let activityIndicator = ActivityIndicator()
     private let disposeBag = DisposeBag()
     private var photos = [Photo]() {
         didSet {
@@ -21,20 +20,21 @@ final class MainViewModel {
     // MARK: Public properties
     let page = BehaviorRelay<Int>(value: 1)
     let sections = BehaviorRelay<[MainSectionModel]>(value: [])
-    let executing: Driver<Bool>
+    let executing = BehaviorRelay(value: false)
     
     init(provider: MoyaProvider<APIProvider>) {
         self.provider = provider
-        executing = activityIndicator.asDriver()
         getPhotos()
     }
     
     private func getPhotos() {
-        provider.request(.getPhotos(page: page.value)) { (result) in
+        executing.accept(true)
+        provider.request(.getPhotos(page: page.value)) { [weak self] (result) in
+            self?.executing.accept(false)
             switch result {
             case.success(let response):
                 if let photos = try? JSONDecoder().decode([Photo].self, from: response.data) {
-                    self.photos = photos
+                    self?.photos = photos
                 }
             case .failure(let error):
                 let title = R.string.localizable.photosListNetworkingErrorTitle()

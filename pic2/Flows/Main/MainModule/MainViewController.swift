@@ -33,7 +33,7 @@ final class MainViewController: BaseViewController, MainViewInput, MainViewOutpu
             .bind(to: tableView.rx.items(dataSource: dataSource()))
             .disposed(by: disposeBag)
         
-        viewModel?.executing.drive(onNext: { (isExecuting) in
+        viewModel?.executing.subscribe(onNext: { (isExecuting) in
             if isExecuting {
                 SVProgressHUD.show()
             } else {
