@@ -30,28 +30,17 @@ final class MainViewModel {
     }
     
     private func getPhotos() {
-        let request = photosRequestObservable()
-        request.subscribe(onNext: { [weak self] (result) in
-            guard let self = self else { return }
+        provider.request(.getPhotos(page: page.value)) { (result) in
             switch result {
-            case .success(let photos):
-                self.photos = photos
-            case .failed(let message):
+            case.success(let response):
+                if let photos = try? JSONDecoder().decode([Photo].self, from: response.data) {
+                    self.photos = photos
+                }
+            case .failure(let error):
                 let title = R.string.localizable.photosListNetworkingErrorTitle()
-                DefaultWireframe.shared.showAlert(title: title, message: message)
+                DefaultWireframe.shared.showAlert(title: title, message: error.errorDescription)
             }
-        }).disposed(by: disposeBag)
-    }
-    
-    private func photosRequestObservable() -> Observable<PhotosResponseResult> {
-        return provider.rx.request(.getPhotos(page: page.value))
-            .retry(3)
-            .trackActivity(activityIndicator)
-            .filterSuccessfulStatusCodes()
-            .map([Photo].self, using: JSONDecoder(), failsOnEmptyData: true)
-            .map { pics in
-                return PhotosResponseResult.success(photos: pics)
-            }.asObservable()
+        }
     }
     
     private func setupSections() {
