@@ -169,8 +169,10 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 7 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 8 localization keys.
     struct localizable {
+      /// Value: Can not parse data
+      static let photosListNetworkingErrorCommonMessage = Rswift.StringResource(key: "Photos.List.Networking.Error.Common.Message", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Email
       static let emailWord = Rswift.StringResource(key: "Email.Word", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Loading...
@@ -185,6 +187,19 @@ struct R: Rswift.Validatable {
       static let passwordWord = Rswift.StringResource(key: "Password.Word", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
       /// Value: Please enter any valid email and passowrd of at least 6 any characters
       static let authTip = Rswift.StringResource(key: "Auth.Tip", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+
+      /// Value: Can not parse data
+      static func photosListNetworkingErrorCommonMessage(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("Photos.List.Networking.Error.Common.Message", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "Photos.List.Networking.Error.Common.Message"
+        }
+
+        return NSLocalizedString("Photos.List.Networking.Error.Common.Message", bundle: bundle, comment: "")
+      }
 
       /// Value: Email
       static func emailWord(preferredLanguages: [String]? = nil) -> String {

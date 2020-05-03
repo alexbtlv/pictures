@@ -59,9 +59,11 @@ final class AuthorizationViewController: BaseViewController, AuthorizationViewIn
             self.viewModel?.password.accept(text)
         }).disposed(by: disposeBag)
         
-        viewModel?.isValid.subscribe(onNext: { [weak self] (isValid) in
-            self?.button.isEnabled = isValid
-            self?.button.isHidden = !isValid
+        viewModel?.isValid.distinctUntilChanged().subscribe(onNext: { [weak self] (isValid) in
+            UIView.animate(withDuration: 0.3) {
+                self?.button.isEnabled = isValid
+                self?.button.isHidden = !isValid
+            }
         }).disposed(by: disposeBag)
         
         button.rx.tap.subscribe(onNext: { [weak self] in

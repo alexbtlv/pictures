@@ -8,6 +8,7 @@
 
 // MARK: Main
 "Photos.List.Networking.Error.Title" = "Oops, something went wrong.";
+"Photos.List.Networking.Error.Common.Message" = "Can not parse data";
 
 // MARK: Words
 "Email.Word" = "Email";

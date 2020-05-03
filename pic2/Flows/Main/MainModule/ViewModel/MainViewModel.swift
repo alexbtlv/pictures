@@ -36,6 +36,8 @@ final class MainViewModel {
             case.success(let response):
                 if let photos = try? JSONDecoder().decode([Photo].self, from: response.data) {
                     self?.photos = photos
+                } else {
+                    self?.error.accept(R.string.localizable.photosListNetworkingErrorCommonMessage())
                 }
             case .failure(let error):
                 self?.error.accept(error.failureReason)

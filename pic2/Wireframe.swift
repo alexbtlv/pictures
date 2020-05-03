@@ -10,7 +10,7 @@ protocol Wireframe {
     func showAlert(title: String?, message: String?)
 }
 
-class DefaultWireframe: UIResponder, Wireframe {
+class DefaultWireframe: Wireframe {
     
     static let shared = DefaultWireframe()
     
